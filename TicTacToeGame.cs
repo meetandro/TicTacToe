@@ -22,10 +22,7 @@ public static class TicTacToeGame
 
     public static string CheckProgress()
     {
-        if (turnCount == 9)
-        {
-            return "Result : Draw";
-        }
+        if (turnCount == 9) return "Result : Draw";
 
         string[] solutions = { "012", "345", "678", "036", "147", "258", "048", "246" };
         char winner = '-';
@@ -34,10 +31,7 @@ public static class TicTacToeGame
         {
             int first = solution[0] - '0', second = solution[1] - '0', third = solution[2] - '0';
 
-            if (board[first] == board[second] && board[second] == board[third] && board[first] != '-')
-            {
-                winner = board[first];
-            }
+            if (board[first] == board[second] && board[second] == board[third] && board[first] != '-') winner = board[first];
         }
 
         if (winner != '-')
